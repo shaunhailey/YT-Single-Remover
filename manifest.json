@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Remove Single Items",
+    "version": "1.0",
+    "description": "Remove sections containing 'Single' from the page.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.svg",
+            "48": "icon.svg",
+            "128": "icon.svg"
+        }
+    }
+}

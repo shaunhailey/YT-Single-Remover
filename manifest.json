@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Remove Single Items",
+    "name": "Remove Singles from YT Music",
     "version": "1.0",
     "description": "Remove sections containing 'Single' from the page.",
     "permissions": [

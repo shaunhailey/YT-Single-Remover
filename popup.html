@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Remove Single Items</title>
     <style>
       body {
         width: 200px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      button {
         padding: 10px;
-        font-size: 16px;
+      }
+      .checkbox-container {
+        margin: 10px 0;
       }
     </style>
   </head>
   <body>
-    <button id="removeButton">Remove Singles</button>
+    <h3>Show/Hide Content</h3>
+    <div class="checkbox-container">
+      <input type="checkbox" id="album" checked />
+      <label for="album">Albums</label>
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" id="ep" checked />
+      <label for="ep">EPs</label>
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" id="single" checked />
+      <label for="single">Singles</label>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>

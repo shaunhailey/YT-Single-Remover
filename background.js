@@ -1,16 +1,27 @@
 chrome.action.onClicked.addListener((tab) => {
-    chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      function: removeSingleItems
-    });
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: updateVisibility
   });
-  
-  function removeSingleItems() {
+});
+
+function updateVisibility() {
+  chrome.storage.sync.get(['album', 'ep', 'single'], (preferences) => {
     const items = document.querySelectorAll('ytmusic-two-row-item-renderer');
     items.forEach(item => {
-      if (item.querySelector('span.style-scope.yt-formatted-string')?.textContent === 'Single') {
-        item.remove();
+      const text = item.querySelector('span.style-scope.yt-formatted-string')?.textContent;
+      if (text) {
+        const textLower = text.toLowerCase();
+        if (textLower === 'single' && !preferences.single) {
+          item.style.display = 'none';
+        } else if (textLower === 'ep' && !preferences.ep) {
+          item.style.display = 'none';
+        } else if (textLower === 'album' && !preferences.album) {
+          item.style.display = 'none';
+        } else {
+          item.style.display = '';
+        }
       }
     });
-    console.log("Sections containing 'Single' removed successfully.");
-  }
+  });
+}

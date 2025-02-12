@@ -1,11 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "Remove Singles from YT Music",
-    "version": "1.0",
-    "description": "Remove sections containing 'Single' from the page.",
+    "name": "Remove Items from YT New Music Page",
+    "version": "1.1",
+    "description": "Remove sections containing unwanted items from the page.",
     "permissions": [
         "activeTab",
-        "scripting"
+        "scripting",
+        "storage"
     ],
     "background": {
         "service_worker": "background.js"

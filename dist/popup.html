@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        width: 200px;
+        padding: 10px;
+      }
+      .checkbox-container {
+        margin: 10px 0;
+      }
+      button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Show/Hide Content</h3>
+    <div class="checkbox-container">
+      <input type="checkbox" id="album" checked />
+      <label for="album">Albums</label>
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" id="ep" checked />
+      <label for="ep">EPs</label>
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" id="single" checked />
+      <label for="single">Singles</label>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
